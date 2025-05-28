@@ -1,5 +1,6 @@
 package io.github.junyali.arsenalandanvil;
 
+import io.github.junyali.arsenalandanvil.item.ArsenalandAnvilItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -23,6 +24,8 @@ public class ArsenalandAnvil
 
     public ArsenalandAnvil(IEventBus modEventBus, ModContainer modContainer)
     {
+        ArsenalandAnvilItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
     }
