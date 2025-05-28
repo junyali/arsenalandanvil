@@ -19,6 +19,12 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    maven {
+        url "https://maven.shadowsoffire.dev/releases"
+    }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
 }
 
 base {
@@ -133,6 +139,9 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    implementation "dev.shadowsoffire:Placebo:${minecraft_version}-${placebo_version}"
+    implementation "dev.shadowsoffire:ApothicAttributes:${minecraft_version}-${attributes_lib_version}"
+    compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
