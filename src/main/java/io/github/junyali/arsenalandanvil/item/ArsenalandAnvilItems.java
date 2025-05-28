@@ -2,6 +2,17 @@ package io.github.junyali.arsenalandanvil.item;
 
 import io.github.junyali.arsenalandanvil.ArsenalandAnvil;
 import io.github.junyali.arsenalandanvil.item.custom.DaggerItem;
+import io.github.junyali.arsenalandanvil.item.custom.KatanaItem;
+import io.github.junyali.arsenalandanvil.item.custom.RapierItem;
+import io.github.junyali.arsenalandanvil.item.custom.ScimitarItem;
+import io.github.junyali.arsenalandanvil.item.custom.LongswordItem;
+import io.github.junyali.arsenalandanvil.item.custom.ClaymoreItem;
+import io.github.junyali.arsenalandanvil.item.custom.WarhammerItem;
+import io.github.junyali.arsenalandanvil.item.custom.BattleaxeItem;
+import io.github.junyali.arsenalandanvil.item.custom.SpearItem;
+import io.github.junyali.arsenalandanvil.item.custom.PikeItem;
+import io.github.junyali.arsenalandanvil.item.custom.HalberdItem;
+import io.github.junyali.arsenalandanvil.item.custom.GlaiveItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -22,6 +33,18 @@ public class ArsenalandAnvilItems {
     static {
         // registerWeaponSet("weapon_name", WeaponClass::new);
         registerWeaponSet("dagger", DaggerItem::new);
+        registerWeaponSet("rapier", RapierItem::new);
+        registerWeaponSet("katana", KatanaItem::new);
+        registerWeaponSet("scimitar", ScimitarItem::new);
+        registerWeaponSet("longsword", LongswordItem::new);
+        registerWeaponSet("claymore", ClaymoreItem::new);
+        registerWeaponSet("war_hammer", WarhammerItem::new);
+        registerWeaponSet("battle_axe", BattleaxeItem::new);
+        registerWeaponSet("spear", SpearItem::new);
+        registerWeaponSet("pike", PikeItem::new);
+        registerWeaponSet("halberd", HalberdItem::new);
+        registerWeaponSet("glaive", GlaiveItem::new);
+
     }
 
     // really messy way of making a weapon set for all tiers wooden -> netherite
