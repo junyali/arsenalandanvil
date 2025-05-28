@@ -19,6 +19,8 @@ import net.minecraft.world.item.Tiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 public class ArsenalandAnvilItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ArsenalandAnvil.MODID);
 
@@ -29,6 +31,9 @@ public class ArsenalandAnvilItems {
     public static final String[] TIER_NAMES = {
             "wooden", "stone", "iron", "golden", "diamond", "netherite"
     };
+
+    public static final Supplier<Item> HARDENED_HANDLE = ITEMS.register("hardened_handle",
+            () -> new Item(new Item.Properties().stacksTo(16)));
 
     static {
         // registerWeaponSet("weapon_name", WeaponClass::new);
