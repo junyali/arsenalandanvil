@@ -20,7 +20,7 @@ public class ArsenalandAnvilCreativeModTabs {
                     .icon(() -> new ItemStack(Items.IRON_SWORD))
                     .title(Component.translatable("creativetab.arsenalandanvil.arsenalandanvil"))
                     .displayItems((itemDisplayParameters, output) -> {
-                    // items goes here :p
+                        ArsenalandAnvilItems.ITEMS.getEntries().forEach(item -> output.accept(item.get()));
                     }).build());
 
     public static void register(IEventBus eventBus) {
