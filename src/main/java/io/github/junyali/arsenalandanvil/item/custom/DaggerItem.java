@@ -13,9 +13,9 @@ public class DaggerItem extends SwordItem {
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
                 .attackDamage(tier.getAttackDamageBonus() + 1.0f)
-                .attackSpeed(-1.8f)
-                .reach(-0.5f)
-                .critChance(0.15f)
+                .attackSpeed(-2.0f)
+                .reach(-0.8f)
+                .critChance(0.2f)
                 .critDamage(0.1f)
                 .build();
     }
