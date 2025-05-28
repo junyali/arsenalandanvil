@@ -1,5 +1,6 @@
 package io.github.junyali.arsenalandanvil;
 
+import io.github.junyali.arsenalandanvil.item.ArsenalandAnvilCreativeModTabs;
 import io.github.junyali.arsenalandanvil.item.ArsenalandAnvilItems;
 import org.slf4j.Logger;
 
@@ -24,10 +25,11 @@ public class ArsenalandAnvil
 
     public ArsenalandAnvil(IEventBus modEventBus, ModContainer modContainer)
     {
-        ArsenalandAnvilItems.register(modEventBus);
-
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
+
+        ArsenalandAnvilCreativeModTabs.register(modEventBus);
+        ArsenalandAnvilItems.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
