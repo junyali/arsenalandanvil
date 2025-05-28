@@ -1,6 +1,7 @@
 package io.github.junyali.arsenalandanvil.item;
 
 import io.github.junyali.arsenalandanvil.ArsenalandAnvil;
+import io.github.junyali.arsenalandanvil.item.custom.DaggerItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
@@ -20,6 +21,7 @@ public class ArsenalandAnvilItems {
 
     static {
         // registerWeaponSet("weapon_name", WeaponClass::new);
+        registerWeaponSet("dagger", DaggerItem::new);
     }
 
     // really messy way of making a weapon set for all tiers wooden -> netherite
