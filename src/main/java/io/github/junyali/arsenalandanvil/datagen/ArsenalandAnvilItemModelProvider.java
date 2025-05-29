@@ -19,11 +19,24 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
             String itemName = entry.getId().getPath();
 
             try {
-                basicItem(entry.get());
+                if (isWeapon(itemName)) {
+                    handheldItem(entry.get());
+                } else {
+                    basicItem(entry.get());
+                }
                 continue;
             } catch (Exception e) {
                 System.out.println("No texture found for: " + itemName);
             }
         }
+    }
+
+    private boolean isWeapon(String itemName) {
+        return itemName.contains("dagger") || itemName.contains("spear") ||
+                itemName.contains("katana") || itemName.contains("rapier") ||
+                itemName.contains("scimitar") || itemName.contains("longsword") ||
+                itemName.contains("claymore") || itemName.contains("warhammer") ||
+                itemName.contains("battleaxe") || itemName.contains("pike") ||
+                itemName.contains("halberd") || itemName.contains("glaive");
     }
 }
