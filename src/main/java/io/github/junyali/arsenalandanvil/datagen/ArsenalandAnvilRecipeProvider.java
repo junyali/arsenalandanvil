@@ -10,6 +10,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,7 +20,7 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         // recipes go here or smthin :3
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ArsenalandAnvilItems.HARDENED_HANDLE.get(), 1)
                 .pattern(" # ")
