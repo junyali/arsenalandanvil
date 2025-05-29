@@ -1,12 +1,13 @@
 package io.github.junyali.arsenalandanvil.datagen;
 
+import io.github.junyali.arsenalandanvil.ArsenalandAnvil;
 import io.github.junyali.arsenalandanvil.item.ArsenalandAnvilItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 public class ArsenalandAnvilLanguageProvider extends LanguageProvider {
-    public ArsenalandAnvilLanguageProvider(PackOutput output, String modid, String locale) {
-        super(output, modid, locale);
+    public ArsenalandAnvilLanguageProvider(PackOutput output, String locale) {
+        super(output, ArsenalandAnvil.MODID, locale);
     }
 
     @Override
