@@ -5,8 +5,8 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
-public class WarhammerItem extends SwordItem {
-    public WarhammerItem(Tier tier, Properties properties) {
+public class KanaboItem extends SwordItem {
+    public KanaboItem(Tier tier, Properties properties) {
         super(tier, properties.attributes(createAttributes(tier)));
     }
 
@@ -16,7 +16,8 @@ public class WarhammerItem extends SwordItem {
                 .attackSpeed(3.2f)
                 .reach(-0.3f)
                 .attackKnockback(1.0f)
-                .armourPierce(0.1f)
+                .armourPierce(0.45f)
+                .lifeSteal(0.4f)
                 .build();
     }
 }

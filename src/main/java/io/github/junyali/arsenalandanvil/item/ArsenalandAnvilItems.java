@@ -7,7 +7,7 @@ import io.github.junyali.arsenalandanvil.item.custom.RapierItem;
 import io.github.junyali.arsenalandanvil.item.custom.ScimitarItem;
 import io.github.junyali.arsenalandanvil.item.custom.LongswordItem;
 import io.github.junyali.arsenalandanvil.item.custom.ClaymoreItem;
-import io.github.junyali.arsenalandanvil.item.custom.WarhammerItem;
+import io.github.junyali.arsenalandanvil.item.custom.KanaboItem;
 import io.github.junyali.arsenalandanvil.item.custom.BattleaxeItem;
 import io.github.junyali.arsenalandanvil.item.custom.SpearItem;
 import io.github.junyali.arsenalandanvil.item.custom.PikeItem;
@@ -43,7 +43,7 @@ public class ArsenalandAnvilItems {
         registerWeaponSet("scimitar", ScimitarItem::new);
         registerWeaponSet("longsword", LongswordItem::new);
         registerWeaponSet("claymore", ClaymoreItem::new);
-        registerWeaponSet("warhammer", WarhammerItem::new);
+        registerWeaponSet("kanabo", KanaboItem::new);
         registerWeaponSet("battleaxe", BattleaxeItem::new);
         registerWeaponSet("spear", SpearItem::new);
         registerWeaponSet("pike", PikeItem::new);

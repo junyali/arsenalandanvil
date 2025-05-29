@@ -56,8 +56,8 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
             else if (itemName.contains("claymore")) {
                 generateClaymoreRecipe(entry.get(), itemName, recipeOutput);
             }
-            else if (itemName.contains("warhammer")) {
-                generateWarhammerRecipe(entry.get(), itemName, recipeOutput);
+            else if (itemName.contains("kanabo")) {
+                generateKanaboRecipe(entry.get(), itemName, recipeOutput);
             }
             else if (itemName.contains("battleaxe")) {
                 generateBattleaxeRecipe(entry.get(), itemName, recipeOutput);
@@ -253,7 +253,7 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
                 .save(recipeOutput);
     }
 
-    private void generateWarhammerRecipe(Item item, String itemName, RecipeOutput recipeOutput) {
+    private void generateKanaboRecipe(Item item, String itemName, RecipeOutput recipeOutput) {
         String tier = extractTier(itemName);
 
         if (tier.equals("netherite")) {

@@ -71,7 +71,7 @@ public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
         return itemName.contains("dagger") || itemName.contains("spear") ||
                 itemName.contains("katana") || itemName.contains("rapier") ||
                 itemName.contains("scimitar") || itemName.contains("longsword") ||
-                itemName.contains("claymore") || itemName.contains("war_hammer") ||
+                itemName.contains("claymore") || itemName.contains("kanabo") ||
                 itemName.contains("battle_axe") || itemName.contains("pike") ||
                 itemName.contains("halberd") ||
                 itemName.contains("glaive");

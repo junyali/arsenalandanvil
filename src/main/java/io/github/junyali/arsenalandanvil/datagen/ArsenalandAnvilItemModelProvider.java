@@ -35,7 +35,7 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
         return itemName.contains("dagger") || itemName.contains("spear") ||
                 itemName.contains("katana") || itemName.contains("rapier") ||
                 itemName.contains("scimitar") || itemName.contains("longsword") ||
-                itemName.contains("claymore") || itemName.contains("warhammer") ||
+                itemName.contains("claymore") || itemName.contains("kanabo") ||
                 itemName.contains("battleaxe") || itemName.contains("pike") ||
                 itemName.contains("halberd") || itemName.contains("glaive");
     }
