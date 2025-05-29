@@ -29,5 +29,6 @@ public class DataGenerators {
 
         // Client
         generator.addProvider(event.includeClient(), new ArsenalandAnvilItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new ArsenalandAnvilRecipeProvider(packOutput, lookupProvider));
     }
 }
