@@ -6,6 +6,8 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import java.io.File;
+
 public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
     public ArsenalandAnvilItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, ArsenalandAnvil.MODID, existingFileHelper);
@@ -15,7 +17,13 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         for (var entry : ArsenalandAnvilItems.ITEMS.getEntries()) {
             String itemName = entry.getId().getPath();
-            basicItem(entry.get());
+
+            try {
+                basicItem(entry.get());
+                continue;
+            } catch (Exception e) {
+                System.out.println("No texture found for: " + itemName);
+            }
         }
     }
 }
