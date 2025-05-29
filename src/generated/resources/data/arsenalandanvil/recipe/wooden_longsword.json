@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "|": {
+      "item": "arsenalandanvil:hardened_handle"
+    }
+  },
+  "pattern": [
+    " # ",
+    " # ",
+    " | "
+  ],
+  "result": {
+    "count": 1,
+    "id": "arsenalandanvil:wooden_longsword"
+  }
+}
