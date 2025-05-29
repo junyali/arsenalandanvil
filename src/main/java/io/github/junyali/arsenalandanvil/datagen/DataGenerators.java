@@ -24,11 +24,11 @@ public class DataGenerators {
         // Server
         generator.addProvider(event.includeServer(), new ArsenalandAnvilRecipeProvider(packOutput, lookupProvider));
         BlockTagsProvider blockTagsProvider = new ArsenalandAnvilBlockTagProvider(packOutput, lookupProvider, existingFileHelper);
-        generator.addProvider(event.includeClient(), blockTagsProvider);
+        generator.addProvider(event.includeServer(), blockTagsProvider);
         generator.addProvider(event.includeServer(), new ArsenalandAnvilItemTagProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
 
         // Client
-        generator.addProvider(event.includeClient(), new ArsenalandAnvilItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new ArsenalandAnvilLanguageProvider(packOutput, "en_us"));
+        generator.addProvider(event.includeClient(), new ArsenalandAnvilItemModelProvider(packOutput, existingFileHelper));
     }
 }

@@ -43,8 +43,8 @@ public class ArsenalandAnvilItems {
         registerWeaponSet("scimitar", ScimitarItem::new);
         registerWeaponSet("longsword", LongswordItem::new);
         registerWeaponSet("claymore", ClaymoreItem::new);
-        registerWeaponSet("war_hammer", WarhammerItem::new);
-        registerWeaponSet("battle_axe", BattleaxeItem::new);
+        registerWeaponSet("warhammer", WarhammerItem::new);
+        registerWeaponSet("battleaxe", BattleaxeItem::new);
         registerWeaponSet("spear", SpearItem::new);
         registerWeaponSet("pike", PikeItem::new);
         registerWeaponSet("halberd", HalberdItem::new);
