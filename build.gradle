@@ -25,6 +25,9 @@ repositories {
     maven {
         url = "https://maven.theillusivec4.top/"
     }
+    maven {
+        url = "https://maven.blamejared.com"
+    }
 }
 
 base {
@@ -142,6 +145,8 @@ dependencies {
     implementation "dev.shadowsoffire:Placebo:${minecraft_version}-${placebo_version}"
     implementation "dev.shadowsoffire:ApothicAttributes:${minecraft_version}-${attributes_lib_version}"
     compileOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}:api"
+    compileOnly "vazkii.patchouli:Patchouli:${patchouli_version}:api"
+    runtimeOnly "vazkii.patchouli:Patchouli:${patchouli_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
