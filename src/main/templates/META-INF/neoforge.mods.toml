@@ -85,6 +85,39 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 
+# External dependencies
+[[dependencies.${mod_id}]]
+    modId="apothic_attributes"
+    type="required"
+    reason="Required for weapon and tool attributes"
+    versionRange="${attributes_lib_version}"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="placebo"
+    type="required"
+    reason="Depended on by Apothic Attributes"
+    versionRange="${placebo_version}"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="curios"
+    type="required"
+    reason="Depended on by Apothic Attributes"
+    versionRange="${curios_version}"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="patchouli"
+    type="required"
+    reason="Required for patchouli books"
+    versionRange="${patchouli_version}"
+    ordering="AFTER"
+    side="BOTH"
+
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
 # stop your mod loading on the server for example.
