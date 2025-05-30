@@ -47,6 +47,13 @@ public class ItemAttributeBuilder {
         return this;
     }
 
+    public ItemAttributeBuilder movementSpeed(float movementSpeed) {
+        builder.add(Attributes.MOVEMENT_SPEED,
+                new AttributeModifier(ResourceLocation.withDefaultNamespace("movement_speed"), (double)movementSpeed, AttributeModifier.Operation.ADD_VALUE),
+                EquipmentSlotGroup.MAINHAND);
+        return this;
+    }
+
     // Apothic Attributes - stuff for apotheosis :D
     public ItemAttributeBuilder armourPierce(float armourPierce) {
         builder.add(ALObjects.Attributes.ARMOR_PIERCE,
