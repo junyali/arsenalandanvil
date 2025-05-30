@@ -42,6 +42,7 @@ public class ArsenalandAnvilItems {
         // Tools
         registerToolSet("hammer", HammerItem::new);
         registerToolSet("sickle", SickleItem::new);
+        registerToolSet("paxel", PaxelItem::new);
     }
 
     // really messy way of making a tool set for all tiers wooden -> netherite

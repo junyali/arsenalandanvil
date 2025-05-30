@@ -80,6 +80,9 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
             else if (itemName.contains("sickle")) {
                 generateSickleRecipe(entry.get(), itemName, recipeOutput);
             }
+            else if (itemName.contains("paxel")) {
+                generatePaxelRecipe(entry.get(), itemName, recipeOutput);
+            }
         }
     }
 
@@ -103,6 +106,42 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
             case "diamond" -> Items.DIAMOND;
             case "netherite" -> Items.NETHERITE_INGOT;
             default -> Items.STICK;
+        };
+    }
+
+    private Item getTierPickaxe(String tier) {
+        return switch (tier) {
+            case "wooden" -> Items.WOODEN_PICKAXE;
+            case "stone" -> Items.STONE_PICKAXE;
+            case "iron" -> Items.IRON_PICKAXE;
+            case "golden" -> Items.GOLDEN_PICKAXE;
+            case "diamond" -> Items.DIAMOND_PICKAXE;
+            case "netherite" -> Items.NETHERITE_PICKAXE;
+            default -> Items.WOODEN_PICKAXE;
+        };
+    }
+
+    private Item getTierAxe(String tier) {
+        return switch (tier) {
+            case "wooden" -> Items.WOODEN_AXE;
+            case "stone" -> Items.STONE_AXE;
+            case "iron" -> Items.IRON_AXE;
+            case "golden" -> Items.GOLDEN_AXE;
+            case "diamond" -> Items.DIAMOND_AXE;
+            case "netherite" -> Items.NETHERITE_AXE;
+            default -> Items.WOODEN_AXE;
+        };
+    }
+
+    private Item getTierShovel(String tier) {
+        return switch (tier) {
+            case "wooden" -> Items.WOODEN_SHOVEL;
+            case "stone" -> Items.STONE_SHOVEL;
+            case "iron" -> Items.IRON_SHOVEL;
+            case "golden" -> Items.GOLDEN_SHOVEL;
+            case "diamond" -> Items.DIAMOND_SHOVEL;
+            case "netherite" -> Items.NETHERITE_SHOVEL;
+            default -> Items.WOODEN_SHOVEL;
         };
     }
 
@@ -424,6 +463,32 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
                 .define('|', ArsenalandAnvilItems.HARDENED_HANDLE.get())
                 .unlockedBy("has_" + tier, has(getTierItem(tier)))
                 .unlockedBy("has_hardened_handle", has(ArsenalandAnvilItems.HARDENED_HANDLE.get()))
+                .save(recipeOutput);
+    }
+
+    private void generatePaxelRecipe(Item item, String itemName, RecipeOutput recipeOutput) {
+        String tier = extractTier(itemName);
+
+        if (tier.equals("netherite")) {
+            generateNetheriteSmithingRecipe(item, itemName, recipeOutput);
+        }
+
+        Item pickaxe = getTierPickaxe(tier);
+        Item axe = getTierAxe(tier);
+        Item shovel = getTierShovel(tier);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, item)
+                .pattern("PAS")
+                .pattern(" | ")
+                .pattern(" | ")
+                .define('P', Ingredient.of(pickaxe))
+                .define('A', Ingredient.of(axe))
+                .define('S', Ingredient.of(shovel))
+                .define('|', Ingredient.of(Items.STICK))
+                .unlockedBy("has_" + tier + "_pickaxe", has(pickaxe))
+                .unlockedBy("has_" + tier + "_axe", has(axe))
+                .unlockedBy("has_" + tier + "_shovel", has(shovel))
+                .unlockedBy("has_" + tier, has(getTierItem(tier)))
                 .save(recipeOutput);
     }
 }

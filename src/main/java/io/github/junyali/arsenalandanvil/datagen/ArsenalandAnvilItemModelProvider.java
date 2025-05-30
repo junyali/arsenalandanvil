@@ -43,6 +43,6 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
     }
 
     private boolean isTool(String itemName) {
-        return itemName.contains("hammer") || itemName.contains("sickle");
+        return itemName.contains("hammer") || itemName.contains("sickle") || itemName.contains("paxel");
     }
 }

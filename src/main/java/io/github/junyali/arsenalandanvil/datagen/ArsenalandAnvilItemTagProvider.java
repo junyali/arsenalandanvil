@@ -25,8 +25,14 @@ public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
 
     // COMMON TAGS - TOOLS
     public static final TagKey<Item> COMBAT_EQUIPMENT = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/weapons"));
+
+    public static final TagKey<Item> PICKAXE_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/pickaxes"));
+    public static final TagKey<Item> AXE_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/axes"));
+    public static final TagKey<Item> SHOVEL_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/shovels"));
+
     public static final TagKey<Item> HAMMER_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/hammers"));
     public static final TagKey<Item> SICKLE_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/sickles"));
+    public static final TagKey<Item> PAXEL_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/paxels"));
 
     public ArsenalandAnvilItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, ArsenalandAnvil.MODID, existingFileHelper);
@@ -64,6 +70,15 @@ public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
                 } else if (itemName.contains("sickle")) {
                     tag(SICKLE_TOOL)
                         .add(item);
+                } else if (itemName.contains("paxel")) {
+                    tag(PAXEL_TOOL)
+                            .add(item);
+                    tag(PICKAXE_TOOL)
+                            .add(item);
+                    tag(AXE_TOOL)
+                            .add(item);
+                    tag(SHOVEL_TOOL)
+                            .add(item);
                 }
             }
         }
@@ -95,6 +110,6 @@ public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
     }
 
     private boolean isTool(String itemName) {
-        return itemName.contains("hammer") || itemName.contains("sickle");
+        return itemName.contains("hammer") || itemName.contains("sickle") || itemName.contains("paxel");
     }
 }
