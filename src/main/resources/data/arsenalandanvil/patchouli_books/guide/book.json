@@ -1,6 +1,6 @@
 {
   "name": "The Guide",
-  "landing_text": "Welcome to Arsenal and Anvil!",
+  "landing_text": "Welcome to $(l)$(6)Arsenal and Anvil$()!$(br2)$(l)$(9)$(playername)$(), your journey begins...$(br2)Your goto guide for information and recipes on $(l)Weapons$() and $(l)Tools$()!",
   "subtitle": "Getting started in Arsenal and Anvil",
   "version": 1,
   "creative_tab": "arsenalandanvil:arsenalandanvil_tab",
