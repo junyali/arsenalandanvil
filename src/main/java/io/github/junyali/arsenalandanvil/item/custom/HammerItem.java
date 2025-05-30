@@ -8,6 +8,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.block.state.BlockState;
@@ -33,9 +34,30 @@ public class HammerItem extends DiggerItem {
 
     @Override
     public boolean isCorrectToolForDrops(@NotNull ItemStack stack, BlockState state) {
-        return state.is(BlockTags.MINEABLE_WITH_PICKAXE) ||
+        boolean toolMineable = state.is(BlockTags.MINEABLE_WITH_PICKAXE) ||
                 state.is(BlockTags.MINEABLE_WITH_AXE) ||
                 state.is(BlockTags.MINEABLE_WITH_SHOVEL);
+
+        if (!toolMineable) return false;
+        if (!state.requiresCorrectToolForDrops()) return true;
+
+        Tier toolTier = this.getTier();
+        if (toolTier == Tiers.WOOD && state.is(BlockTags.INCORRECT_FOR_WOODEN_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.STONE && state.is(BlockTags.INCORRECT_FOR_STONE_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.IRON && state.is(BlockTags.INCORRECT_FOR_IRON_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.DIAMOND && state.is(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.GOLD && state.is(BlockTags.INCORRECT_FOR_GOLD_TOOL)) {
+            return false;
+        }
+        return toolTier != Tiers.NETHERITE || !state.is(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
     }
 
     // Method for 3x3 mining (thanks Kaupenjoe)

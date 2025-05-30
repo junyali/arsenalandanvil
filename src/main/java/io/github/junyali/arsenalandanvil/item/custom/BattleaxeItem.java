@@ -12,8 +12,8 @@ public class BattleaxeItem extends SwordItem {
 
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
-                .attackDamage(tier.getAttackDamageBonus() + 1.0f + 1.0f)
-                .attackSpeed(+2.8f)
+                .attackDamage(tier.getAttackDamageBonus() + 1.0f + 1.5f)
+                .attackSpeed(-3.2f)
                 .armourPierce(0.2f)
                 .build();
     }

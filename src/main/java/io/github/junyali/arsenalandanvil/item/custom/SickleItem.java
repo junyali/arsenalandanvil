@@ -6,11 +6,15 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.DiggerItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +32,30 @@ public class SickleItem extends DiggerItem {
                 .attackSpeed(-2.6f)
                 .miningSpeed(0.2f)
                 .build();
+    }
+
+    @Override
+    public boolean isCorrectToolForDrops(@NotNull ItemStack stack, BlockState state) {
+        if (!state.is(BlockTags.MINEABLE_WITH_HOE)) return false;
+        if (!state.requiresCorrectToolForDrops()) return true;
+
+        Tier toolTier = this.getTier();
+        if (toolTier == Tiers.WOOD && state.is(BlockTags.INCORRECT_FOR_WOODEN_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.STONE && state.is(BlockTags.INCORRECT_FOR_STONE_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.IRON && state.is(BlockTags.INCORRECT_FOR_IRON_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.DIAMOND && state.is(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)) {
+            return false;
+        }
+        if (toolTier == Tiers.GOLD && state.is(BlockTags.INCORRECT_FOR_GOLD_TOOL)) {
+            return false;
+        }
+        return toolTier != Tiers.NETHERITE || !state.is(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
     }
 
     // Method for 3x3 mining (thanks Kaupenjoe)
