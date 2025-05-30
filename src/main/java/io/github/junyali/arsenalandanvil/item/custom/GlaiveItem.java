@@ -12,9 +12,10 @@ public class GlaiveItem extends SwordItem {
 
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
-                .attackDamage(tier.getAttackDamageBonus() + 1.0f + 0.5f)
+                .attackDamage(tier.getAttackDamageBonus() + 1.0f)
                 .attackSpeed(-2.4f)
-                .reach(1.0f)
+                .reach(0.5f)
+                .lifeSteal(0.15f)
                 .build();
     }
 }

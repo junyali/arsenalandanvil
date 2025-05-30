@@ -13,9 +13,9 @@ public class HalberdItem extends SwordItem {
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
                 .attackDamage(tier.getAttackDamageBonus() + 1.0f + 1.5f)
-                .attackSpeed(3.0f)
+                .attackSpeed(3.2f)
                 .reach(1.2f)
-                .armourPierce(0.2f)
+                .armourPierce(0.4f)
                 .build();
     }
 }

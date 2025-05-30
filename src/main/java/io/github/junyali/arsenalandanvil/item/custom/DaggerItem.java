@@ -12,11 +12,11 @@ public class DaggerItem extends SwordItem {
 
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
-                .attackDamage(tier.getAttackDamageBonus() + 1.0f)
-                .attackSpeed(-2.0f)
-                .reach(-0.8f)
-                .critChance(0.2f)
-                .critDamage(0.1f)
+                .attackDamage(tier.getAttackDamageBonus() + 1.0f - 1.0f)
+                .attackSpeed(3.6f)
+                .reach(-1.0f)
+                .critChance(0.3f)
+                .critDamage(0.15f)
                 .build();
     }
 }

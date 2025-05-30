@@ -13,7 +13,7 @@ public class ClaymoreItem extends SwordItem {
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
                 .attackDamage(tier.getAttackDamageBonus() + 1.0f + 1.5f)
-                .attackSpeed(3.6f)
+                .attackSpeed(-3.6f)
                 .reach(0.5f)
                 .attackKnockback(0.5f)
                 .build();

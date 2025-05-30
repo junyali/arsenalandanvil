@@ -13,10 +13,11 @@ public class ScimitarItem extends SwordItem {
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
                 .attackDamage(tier.getAttackDamageBonus() + 1.0f)
-                .attackSpeed(-2.1f)
+                .attackSpeed(2.0f)
+                .reach(-0.5f)
                 .critChance(0.05f)
                 .critDamage(0.1f)
-                .lifeSteal(0.02f)
+                .lifeSteal(0.05f)
                 .build();
     }
 }

@@ -12,12 +12,12 @@ public class KanaboItem extends SwordItem {
 
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
-                .attackDamage(tier.getAttackDamageBonus() + 1.0f + 2.5f)
+                .attackDamage(tier.getAttackDamageBonus() + 1.0f - 1.0f)
                 .attackSpeed(3.2f)
-                .reach(-0.3f)
+                .reach(0.5f)
                 .attackKnockback(1.0f)
-                .armourPierce(0.45f)
-                .lifeSteal(0.4f)
+                .armourPierce(0.35f)
+                .lifeSteal(0.1f)
                 .build();
     }
 }

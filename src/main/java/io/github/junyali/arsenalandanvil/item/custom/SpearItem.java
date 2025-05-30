@@ -13,7 +13,7 @@ public class SpearItem extends SwordItem {
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
                 .attackDamage(tier.getAttackDamageBonus() + 1.0f)
-                .attackSpeed(2.8f)
+                .attackSpeed(-2.8f)
                 .reach(1.5f)
                 .armourPierce(0.1f)
                 .build();

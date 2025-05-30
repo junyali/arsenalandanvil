@@ -13,7 +13,7 @@ public class PikeItem extends SwordItem {
     private static ItemAttributeModifiers createAttributes(Tier tier) {
         return ItemAttributeBuilder.weapon()
                 .attackDamage(tier.getAttackDamageBonus() + 1.0f - 0.5f)
-                .attackSpeed(3.2f)
+                .attackSpeed(-3.2f)
                 .reach(2.0f)
                 .armourPierce(0.15f)
                 .build();
