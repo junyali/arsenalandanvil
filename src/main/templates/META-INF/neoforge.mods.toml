@@ -106,7 +106,7 @@ description='''${mod_description}'''
     modId="curios"
     type="required"
     reason="Depended on by Apothic Attributes"
-    versionRange="[9.5.1,)"
+    versionRange="[9.3.1,)"
     ordering="AFTER"
     side="BOTH"
 
