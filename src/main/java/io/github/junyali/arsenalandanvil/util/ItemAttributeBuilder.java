@@ -18,7 +18,7 @@ public class ItemAttributeBuilder {
     // Generic Attributes - stuff in vanilla mc
     public ItemAttributeBuilder attackDamage(float attackDamage) {
         builder.add(Attributes.ATTACK_DAMAGE,
-                new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID, (double)attackDamage - 1.0, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID, (double)attackDamage - 1.0 + 3.0, AttributeModifier.Operation.ADD_VALUE),
                 EquipmentSlotGroup.MAINHAND
         );
         return this;
