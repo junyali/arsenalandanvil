@@ -52,7 +52,11 @@ public class ArsenalandAnvilItems {
             String tierName = TIER_NAMES[i];
             String itemName = tierName + "_" + toolType;
 
-            ITEMS.register(itemName, () -> factory.create(tier, new Item.Properties()));
+            final Item.Properties properties = tier == Tiers.NETHERITE
+                    ? new Item.Properties().fireResistant()
+                    : new Item.Properties();
+
+            ITEMS.register(itemName, () -> factory.create(tier, properties));
         }
     }
 
