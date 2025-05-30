@@ -1,0 +1,17 @@
+{
+  "name": "Dagger",
+  "icon": "arsenalandanvil:iron_dagger",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Dagger",
+      "text": "The $(l)Dagger$() is a $(b)$(n)fast$() weapon.$(br2)$(l)$(2)+$() $(a)Extremely fast attack speed$()$(br)$(l)$(2)+$() $(a)Higher critical chance$()$(br2)$(l)$(4)-$() $(c)Extremely short reach$()$(br)$(l)$(4)-$() $(c)Lower base damage$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_dagger",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

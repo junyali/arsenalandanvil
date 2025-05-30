@@ -1,0 +1,17 @@
+{
+  "name": "Pike",
+  "icon": "arsenalandanvil:iron_pike",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Pike",
+      "text": "The $(l)Pike$() is a $(d)$(n)polearm$() weapon.$(br2)$(l)$(2)+$() $(a)Extremely long reach$()$(br)$(l)$(2)+$() $(a)Low armour pierce$()$(br2)$(l)$(4)-$() $(c)Very slow attack speed$()$(br)$(l)$(4)-$() $(c)Lower base damage$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_pike",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

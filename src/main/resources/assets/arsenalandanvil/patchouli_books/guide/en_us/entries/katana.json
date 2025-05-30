@@ -1,0 +1,17 @@
+{
+  "name": "Katana",
+  "icon": "arsenalandanvil:iron_katana",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Katana",
+      "text": "The $(l)Katana$() is a $(b)$(n)fast$() weapon.$(br2)$(l)$(2)+$() $(a)Very fast attack speed$()$(br)$(l)$(2)+$() $(a)Higher critical chance$()$(br)$(l)$(2)+$() $(a)Higher critical damage$()$(br2)$(l)$(4)-$() $(c)Shorter range$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_katana",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Kanabo",
+  "icon": "arsenalandanvil:iron_kanabo",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Kanabo",
+      "text": "The $(l)Kanabo$() is a $(7)$(n)heavy$() weapon.$(br2)$(l)$(2)+$() $(a)Longer reach$()$(br)$(l)$(2)+$() $(a)High armour pierce$()$(br)$(l)$(2)+$() $(a)Higher knockback$()$(br2)$(l)$(4)-$() $(c)Very slow attack speed$()$(br)$(l)$(4)-$() $(c)Lower base damage$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_kanabo",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Halberd",
+  "icon": "arsenalandanvil:iron_halberd",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Halberd",
+      "text": "The $(l)Halberd$() is a $(d)$(n)polearm$() weapon.$(br2)$(l)$(2)+$() $(a)Very long reach$()$(br)$(l)$(2)+$() $(a)High armour pierce$()$(br)$(l)$(4)-$() $(c)Higher base damage$()$(br2)$(l)$(4)-$() $(c)Extremely slow attack speed$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_halberd",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

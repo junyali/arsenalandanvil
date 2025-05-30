@@ -1,0 +1,17 @@
+{
+  "name": "Spear",
+  "icon": "arsenalandanvil:iron_spear",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Spear",
+      "text": "The $(l)Spear$() is a $(d)$(n)polearm$() weapon.$(br2)$(l)$(2)+$() $(a)Very long reach$()$(br)$(l)$(2)+$() $(a)Low armour pierce$()$(br2)$(l)$(4)-$() $(c)Very slow attack speed$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_spear",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Scimitar",
+  "icon": "arsenalandanvil:iron_scimitar",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Scimitar",
+      "text": "The $(l)Scimitar$() is a $(b)$(n)fast$() weapon.$(br2)$(l)$(2)+$() $(a)Fast attack speed$()$(br)$(l)$(2)+$() $(a)Extremely small chance to life steal$()$(br2)$(l)$(4)-$() $(c)Shorter range$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_scimitar",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

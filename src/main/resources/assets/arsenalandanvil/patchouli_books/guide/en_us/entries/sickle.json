@@ -1,0 +1,17 @@
+{
+  "name": "Sickle",
+  "icon": "arsenalandanvil:iron_sickle",
+  "category": "arsenalandanvil:tools",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Sickle",
+      "text": "The $(l)Sickle$() is able to harvest a 3x3 area of crops, with a small chance of increasing crop yield.$(br2)It has the same functions as a $(l)hoe.$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_sickle",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

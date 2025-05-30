@@ -1,0 +1,17 @@
+{
+  "name": "Longsword",
+  "icon": "arsenalandanvil:iron_longsword",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Longsword",
+      "text": "The $(l)Longsword$() is a $(7)$(n)heavy$() weapon.$(br2)$(l)$(2)+$() $(a)Very long reach$()$(br2)$(l)$(4)-$() $(c)Very slow attack speed$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_longsword",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

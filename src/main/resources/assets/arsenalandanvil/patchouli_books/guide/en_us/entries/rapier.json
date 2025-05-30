@@ -1,0 +1,17 @@
+{
+  "name": "Rapier",
+  "icon": "arsenalandanvil:iron_rapier",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Rapier",
+      "text": "The $(l)Rapier$() is a $(b)$(n)fast$() weapon.$(br2)$(l)$(2)+$() $(a)Very fast attack speed$()$(br)$(l)$(2)+$() $(a)Longer reach$()$(br)$(l)$(2)+$() $(a)Higher critical damage$()$(br)$(l)$(2)+$() $(a)Low armour pierce$()$(br2)$(l)$(4)-$() $(c)Lower base damage$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_rapier",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

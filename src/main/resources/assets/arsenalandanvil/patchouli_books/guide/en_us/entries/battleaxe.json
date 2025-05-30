@@ -1,0 +1,17 @@
+{
+  "name": "Battleaxe",
+  "icon": "arsenalandanvil:iron_battleaxe",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Battleaxe",
+      "text": "The $(l)Battleaxe$() is a $(7)$(n)heavy$() weapon.$(br2)$(l)$(2)+$() $(a)Higher base damage$()$(br)$(l)$(2)+$() $(a)Low armour pierce$()$(br2)$(l)$(4)-$() $(c)Slow attack speed$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_battleaxe",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

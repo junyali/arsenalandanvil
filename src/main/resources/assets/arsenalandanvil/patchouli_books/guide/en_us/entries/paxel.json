@@ -1,0 +1,18 @@
+{
+  "name": "Paxel",
+  "icon": "arsenalandanvil:iron_paxel",
+  "category": "arsenalandanvil:tools",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Paxel",
+      "text": "The $(l)Paxel$() is able to function as a pickaxe, axe, and shovel in one."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_paxel",
+      "recipe2": "arsenalandanvil:netherite_paxel",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

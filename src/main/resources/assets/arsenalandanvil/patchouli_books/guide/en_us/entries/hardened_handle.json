@@ -1,0 +1,17 @@
+{
+  "name": "Hardened Handle",
+  "icon": "arsenalandanvil:hardened_handle",
+  "category": "arsenalandanvil:weapons",
+  "priority": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Hardened Handle",
+      "text": "The $(l)Hardened Handle$() is a core crafting component of most tools in Arsenal and Anvil."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:hardened_handle"
+    }
+  ]
+}

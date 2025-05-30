@@ -1,0 +1,17 @@
+{
+  "name": "Hammer",
+  "icon": "arsenalandanvil:iron_hammer",
+  "category": "arsenalandanvil:tools",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Hammer",
+      "text": "The $(l)Hammer$() is able to mine a 3x3 area of blocks in the direction you're mining from.$(br2)It has the same functions as a $(l)$(l:arsenalandanvil:paxel)paxel$().$(br2)It $(l)$(4)cannot$() mine crops."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_hammer",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

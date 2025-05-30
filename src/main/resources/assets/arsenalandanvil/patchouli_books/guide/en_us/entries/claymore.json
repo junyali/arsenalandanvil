@@ -1,0 +1,17 @@
+{
+  "name": "Claymore",
+  "icon": "arsenalandanvil:iron_claymore",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Claymore",
+      "text": "The $(l)Claymore$() is a $(7)$(n)heavy$() weapon.$(br2)$(l)$(2)+$() $(a)Very long reach$()$(br)$(l)$(2)+$() $(a)Higher base damage$()$(br)$(l)$(2)+$() $(a)High knockback$()$(br2)$(l)$(4)-$() $(c)Extremely slow attack speed$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_claymore",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}

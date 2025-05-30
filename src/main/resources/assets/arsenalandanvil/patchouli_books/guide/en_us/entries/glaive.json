@@ -1,0 +1,17 @@
+{
+  "name": "Glaive",
+  "icon": "arsenalandanvil:iron_glaive",
+  "category": "arsenalandanvil:weapons",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Glaive",
+      "text": "The $(l)Glaive$() is a $(d)$(n)polearm$() weapon.$(br2)$(l)$(2)+$() $(a)Long reach$()$(br)$(l)$(2)+$() $(a)Small chance to life steal$()$(br2)$(l)$(4)-$() $(c)Slow attack speed$()"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "arsenalandanvil:iron_glaive",
+      "text": "$(br)Smithing recipes still apply."
+    }
+  ]
+}
