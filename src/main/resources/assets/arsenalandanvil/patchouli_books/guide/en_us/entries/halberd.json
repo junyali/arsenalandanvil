@@ -6,7 +6,7 @@
     {
       "type": "patchouli:text",
       "title": "Halberd",
-      "text": "The $(l)Halberd$() is a $(d)$(n)polearm$() weapon.$(br2)$(l)$(2)+$() $(a)Very long reach$()$(br)$(l)$(2)+$() $(a)High armour pierce$()$(br)$(l)$(4)-$() $(c)Higher base damage$()$(br2)$(l)$(4)-$() $(c)Extremely slow attack speed$()"
+      "text": "The $(l)Halberd$() is a $(d)$(n)polearm$() weapon.$(br2)$(l)$(2)+$() $(a)Very long reach$()$(br)$(l)$(2)+$() $(a)High armour pierce$()$(br)$(l)$(2)+$() $(a)Higher base damage$()$(br2)$(l)$(4)-$() $(c)Extremely slow attack speed$()"
     },
     {
       "type": "patchouli:crafting",
