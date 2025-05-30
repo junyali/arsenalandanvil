@@ -90,7 +90,7 @@ description='''${mod_description}'''
     modId="apothic_attributes"
     type="required"
     reason="Required for weapon and tool attributes"
-    versionRange="${attributes_lib_version}"
+    versionRange="[2.8.1,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -98,7 +98,7 @@ description='''${mod_description}'''
     modId="placebo"
     type="required"
     reason="Depended on by Apothic Attributes"
-    versionRange="${placebo_version}"
+    versionRange="[9.8.1,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -106,7 +106,7 @@ description='''${mod_description}'''
     modId="curios"
     type="required"
     reason="Depended on by Apothic Attributes"
-    versionRange="${curios_version}"
+    versionRange="[9.5.1,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -114,7 +114,7 @@ description='''${mod_description}'''
     modId="patchouli"
     type="required"
     reason="Required for patchouli books"
-    versionRange="${patchouli_version}"
+    versionRange="[1.21-88,)"
     ordering="AFTER"
     side="BOTH"
 
