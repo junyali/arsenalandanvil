@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "patchouli:guide_book"
+    },
+    "title": "A new journey...",
+    "description": "Getting started with Arsenal and Anvil",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "loot": [
+      "arsenalandanvil:grant_guide_on_first_join"
+    ]
+  }
+}
