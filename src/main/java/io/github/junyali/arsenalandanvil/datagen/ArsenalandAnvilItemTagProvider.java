@@ -19,9 +19,14 @@ import java.util.concurrent.CompletableFuture;
 
 public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
 
+    // COMMON TAGS - RODS
     public static final TagKey<Item> WEAPON_HANDLES = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "rods/weapon"));
     public static final TagKey<Item> REINFORCED_HANDLES = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "rods/reinforced"));
+
+    // COMMON TAGS - TOOLS
     public static final TagKey<Item> COMBAT_EQUIPMENT = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/weapons"));
+    public static final TagKey<Item> HAMMER_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/hammers"));
+    public static final TagKey<Item> SICKLE_TOOL = ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", "tools/sickles"));
 
     public ArsenalandAnvilItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTags, ArsenalandAnvil.MODID, existingFileHelper);
@@ -47,6 +52,19 @@ public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
                         .add(item);
                 tag(Tags.Items.MELEE_WEAPON_TOOLS)
                         .add(item);
+            } else if (isTool(itemName)) {
+                tag(Tags.Items.MINING_TOOL_TOOLS)
+                        .add(item);
+                tag(COMBAT_EQUIPMENT)
+                        .add(item);
+
+                if (itemName.contains("hammer")) {
+                    tag(HAMMER_TOOL)
+                        .add(item);
+                } else if (itemName.contains("sickle")) {
+                    tag(SICKLE_TOOL)
+                        .add(item);
+                }
             }
         }
     }
@@ -73,7 +91,10 @@ public class ArsenalandAnvilItemTagProvider extends ItemTagsProvider {
                 itemName.contains("scimitar") || itemName.contains("longsword") ||
                 itemName.contains("claymore") || itemName.contains("kanabo") ||
                 itemName.contains("battleaxe") || itemName.contains("pike") ||
-                itemName.contains("halberd") ||
-                itemName.contains("glaive");
+                itemName.contains("halberd") || itemName.contains("glaive");
+    }
+
+    private boolean isTool(String itemName) {
+        return itemName.contains("hammer") || itemName.contains("sickle");
     }
 }

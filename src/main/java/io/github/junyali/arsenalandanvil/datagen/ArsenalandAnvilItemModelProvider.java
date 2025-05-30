@@ -6,8 +6,6 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-import java.io.File;
-
 public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
     public ArsenalandAnvilItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, ArsenalandAnvil.MODID, existingFileHelper);
@@ -19,7 +17,7 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
             String itemName = entry.getId().getPath();
 
             try {
-                if (isWeapon(itemName)) {
+                if (isHandheld(itemName)) {
                     handheldItem(entry.get());
                 } else {
                     basicItem(entry.get());
@@ -31,6 +29,10 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
         }
     }
 
+    private boolean isHandheld(String itemName) {
+        return isWeapon(itemName) || isTool(itemName);
+    }
+
     private boolean isWeapon(String itemName) {
         return itemName.contains("dagger") || itemName.contains("spear") ||
                 itemName.contains("katana") || itemName.contains("rapier") ||
@@ -38,5 +40,9 @@ public class ArsenalandAnvilItemModelProvider extends ItemModelProvider {
                 itemName.contains("claymore") || itemName.contains("kanabo") ||
                 itemName.contains("battleaxe") || itemName.contains("pike") ||
                 itemName.contains("halberd") || itemName.contains("glaive");
+    }
+
+    private boolean isTool(String itemName) {
+        return itemName.contains("hammer") || itemName.contains("sickle");
     }
 }

@@ -1,18 +1,7 @@
 package io.github.junyali.arsenalandanvil.item;
 
 import io.github.junyali.arsenalandanvil.ArsenalandAnvil;
-import io.github.junyali.arsenalandanvil.item.custom.DaggerItem;
-import io.github.junyali.arsenalandanvil.item.custom.KatanaItem;
-import io.github.junyali.arsenalandanvil.item.custom.RapierItem;
-import io.github.junyali.arsenalandanvil.item.custom.ScimitarItem;
-import io.github.junyali.arsenalandanvil.item.custom.LongswordItem;
-import io.github.junyali.arsenalandanvil.item.custom.ClaymoreItem;
-import io.github.junyali.arsenalandanvil.item.custom.KanaboItem;
-import io.github.junyali.arsenalandanvil.item.custom.BattleaxeItem;
-import io.github.junyali.arsenalandanvil.item.custom.SpearItem;
-import io.github.junyali.arsenalandanvil.item.custom.PikeItem;
-import io.github.junyali.arsenalandanvil.item.custom.HalberdItem;
-import io.github.junyali.arsenalandanvil.item.custom.GlaiveItem;
+import io.github.junyali.arsenalandanvil.item.custom.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Tier;
@@ -36,35 +25,38 @@ public class ArsenalandAnvilItems {
             () -> new Item(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON)));
 
     static {
-        // registerWeaponSet("weapon_name", WeaponClass::new);
-        registerWeaponSet("dagger", DaggerItem::new);
-        registerWeaponSet("rapier", RapierItem::new);
-        registerWeaponSet("katana", KatanaItem::new);
-        registerWeaponSet("scimitar", ScimitarItem::new);
-        registerWeaponSet("longsword", LongswordItem::new);
-        registerWeaponSet("claymore", ClaymoreItem::new);
-        registerWeaponSet("kanabo", KanaboItem::new);
-        registerWeaponSet("battleaxe", BattleaxeItem::new);
-        registerWeaponSet("spear", SpearItem::new);
-        registerWeaponSet("pike", PikeItem::new);
-        registerWeaponSet("halberd", HalberdItem::new);
-        registerWeaponSet("glaive", GlaiveItem::new);
+        // Weapons
+        registerToolSet("dagger", DaggerItem::new);
+        registerToolSet("rapier", RapierItem::new);
+        registerToolSet("katana", KatanaItem::new);
+        registerToolSet("scimitar", ScimitarItem::new);
+        registerToolSet("longsword", LongswordItem::new);
+        registerToolSet("claymore", ClaymoreItem::new);
+        registerToolSet("kanabo", KanaboItem::new);
+        registerToolSet("battleaxe", BattleaxeItem::new);
+        registerToolSet("spear", SpearItem::new);
+        registerToolSet("pike", PikeItem::new);
+        registerToolSet("halberd", HalberdItem::new);
+        registerToolSet("glaive", GlaiveItem::new);
 
+        // Tools
+        registerToolSet("hammer", HammerItem::new);
+        registerToolSet("sickle", SickleItem::new);
     }
 
-    // really messy way of making a weapon set for all tiers wooden -> netherite
-    private static void registerWeaponSet(String weaponType, WeaponFactory factory) {
+    // really messy way of making a tool set for all tiers wooden -> netherite
+    private static void registerToolSet(String toolType, ToolFactory factory) {
         for (int i = 0; i < TIERS.length; i++) {
             Tier tier = TIERS[i];
             String tierName = TIER_NAMES[i];
-            String itemName = tierName + "_" + weaponType;
+            String itemName = tierName + "_" + toolType;
 
             ITEMS.register(itemName, () -> factory.create(tier, new Item.Properties()));
         }
     }
 
     @FunctionalInterface
-    private interface WeaponFactory {
+    private interface ToolFactory {
         Item create(Tier tier, Item.Properties properties);
     }
 

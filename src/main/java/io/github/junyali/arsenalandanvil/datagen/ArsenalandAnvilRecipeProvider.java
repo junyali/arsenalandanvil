@@ -74,6 +74,12 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
             else if (itemName.contains("glaive")) {
                 generateGlaiveRecipe(entry.get(), itemName, recipeOutput);
             }
+            else if (itemName.contains("hammer")) {
+                generateHammerRecipe(entry.get(), itemName, recipeOutput);
+            }
+            else if (itemName.contains("sickle")) {
+                generateSickleRecipe(entry.get(), itemName, recipeOutput);
+            }
         }
     }
 
@@ -372,6 +378,48 @@ public class ArsenalandAnvilRecipeProvider extends RecipeProvider implements ICo
                 .pattern(" # ")
                 .pattern(" |#")
                 .pattern(" | ")
+                .define('#', material)
+                .define('|', ArsenalandAnvilItems.HARDENED_HANDLE.get())
+                .unlockedBy("has_" + tier, has(getTierItem(tier)))
+                .unlockedBy("has_hardened_handle", has(ArsenalandAnvilItems.HARDENED_HANDLE.get()))
+                .save(recipeOutput);
+    }
+
+    private void generateHammerRecipe(Item item, String itemName, RecipeOutput recipeOutput) {
+        String tier = extractTier(itemName);
+
+        if (tier.equals("netherite")) {
+            generateNetheriteSmithingRecipe(item, itemName, recipeOutput);
+            return;
+        }
+
+        Ingredient material = getTierMaterial(tier);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, item)
+                .pattern("###")
+                .pattern("###")
+                .pattern(" | ")
+                .define('#', material)
+                .define('|', ArsenalandAnvilItems.HARDENED_HANDLE.get())
+                .unlockedBy("has_" + tier, has(getTierItem(tier)))
+                .unlockedBy("has_hardened_handle", has(ArsenalandAnvilItems.HARDENED_HANDLE.get()))
+                .save(recipeOutput);
+    }
+
+    private void generateSickleRecipe(Item item, String itemName, RecipeOutput recipeOutput) {
+        String tier = extractTier(itemName);
+
+        if (tier.equals("netherite")) {
+            generateNetheriteSmithingRecipe(item, itemName, recipeOutput);
+            return;
+        }
+
+        Ingredient material = getTierMaterial(tier);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, item)
+                .pattern(" ##")
+                .pattern("  #")
+                .pattern("|  ")
                 .define('#', material)
                 .define('|', ArsenalandAnvilItems.HARDENED_HANDLE.get())
                 .unlockedBy("has_" + tier, has(getTierItem(tier)))
